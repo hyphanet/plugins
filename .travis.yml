@@ -1,0 +1,24 @@
+language: java
+
+sudo: false
+
+env:
+  global:
+    - "AWS_ACCESS_KEY_ID=AKIAJQUIQIL3XTBHT3DA"
+    # our AWS_SECRET_ACCESS_KEY follows
+    - secure: "fiReuFbMSOvmIAmQzfdbNCj8IqCPp8W5U7sPBMZuxPuMRNMOLt0gs7i1SPstPEQ1yNO6q7npw031GTNXN5vqfkS+M0ikhbEmqamoALoxZAbUneWV3Okfkqlxyj6AT968yAKr3muA/lsS+LJnQqstedjymb+QaQja6TKvJiYM9MHMAwk63LeiC2550XnPueK1Y+7U66EunlZe4GZLoJ0FROCgjZ6y72IzoUiGk9la1HK22h8Qr9fhc2A5LJKEHSn8IC+DuWKXXEHoIU8R0fpIZVeMWTHfrVgTZGCD6ej+RbPBO2CzCJIuqtykIVN0D97WllnBSjAVRIhNeYPSYRhUTeaBwbadoRWD9736121ClbyJxg2Ho3u775yVDtHThsbmcb4KYNEjL63Dg+VT5vWpwm1V8SkujYqdUho+FefRHPkxyebxz3vTuDlCreHVhLbFzHg6GIv0vc/KSN4b4TbrfokXmA43OlAP+huhGkVwVhuihzn+1nuw278OUUU94lEWxGh3r6DfYHygG8ECxg+s6NwC1nmrLWj2JubII8nZU+wI9+RdpHjwURmq+Bew05SrqtTeebhXcHy7MaIOo7V+OSHkw7J6nuIrbUZsvo0FzO5lcDKzdVAi71ebEHEhmlzkpM4J6Q8DcCU7u9IGOa1Y33Wq3lyDNqA63zWW1F6+QXY="
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -f  $HOME/.gradle/caches/jars-2/jars-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  apt: true
+  directories:
+  - $HOME/.m2
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+
+jdk:
+  - openjdk7
