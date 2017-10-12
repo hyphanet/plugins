@@ -1,0 +1,3 @@
+[submodule "UPnP2"]
+	path = UPnP2
+	url = git@github.com:freenet/plugin-UPnP2.git

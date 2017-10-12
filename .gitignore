@@ -1,0 +1,10 @@
+.classpath
+*.swp
+*.iml
+*.ipr
+*.iws
+.*
+*~
+\#*\#
+/override.properties
+/gradle.properties
