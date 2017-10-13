@@ -1,7 +1,7 @@
 allprojects {
     group = 'org.freenetproject.plugins'
     tasks.withType(Jar) {
-        preserveFileTimestamps = true
+        preserveFileTimestamps = false
         reproducibleFileOrder = true
         duplicatesStrategy = "exclude"
     }
